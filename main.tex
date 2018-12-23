@@ -228,10 +228,15 @@ Insert ~ geometry ~ free ~ equation
         (-> eq N shape)
         (-> eq vitesse déplacement onde)
         
-         This  acoustic wave is propagated in the atmosphere with a ray tracing method (citation, J.X. Dessa ?? + see details in quentin Brissaud thesis). Then the interaction between the waves and the atmospheric background is computed. The atmospherics parameters such as air density, temperature and sound speed are derived from NTRL (citation) and the ionosphere background such as electron density is derived from IRI (citation). After that  the perturbation is integrated along the LOS between the SIPP at 180 ? (to discuss : astafyeva 2018, see changes if taking into account a lower boundary) and 500?? km of altitude in order to reconstruct the STEC perturbation. 
-        As we plan to test the impact of the satellites position and especially its elevation on the data we kept the STEC instead of converting it to VTEC. 
+         This  acoustic wave is propagated in the atmosphere with a 3 Dimensional ray tracing method (citation, J.X. Dessa ?? + see details in quentin Brissaud thesis). Then the interaction between the waves and the atmospheric background is computed. The atmospherics parameters such as air density, temperature and sound speed are derived from NTRL (citation). We assume here a 1-D stratified atmosphere and the ionosphere background such as electron density is derived from IRI (citation) in 3-D. After that  the perturbation is integrated along the LOS between the SIPP at 180 ? (to discuss : astafyeva 2018, see changes if taking into account a lower boundary) and 500?? km of altitude in order to reconstruct the STEC perturbation. 
+		\todo[inline]{check the acoustic cut-off frequency for this zone }   
+		The synthetics are filtered with the same apodized butterworth filter than the observation.       
+         
+        As we plan to test the impact of the satellites position and especially its elevation on the data we kept the STEC instead of converting it to VTEC. Moreover as we reconstruct the perturbation in a specific geometry and compared it to the exact same geometry.
+        \todo[inline]{add something in the discussion about the fact it seems not necessary to use VTEC in our case  }
         
-        The main parameters we focused to tune in our work is the impact of the broadening factor in the N-Shape generated waves   
+        The main parameters we focused to tune in our work are in one hand the impact of the broadening factor in the N-Shape generated waves, in the other hand the localization of the acoustic source. We also apply an amplification factor to match the observed and the synthetic data which for now would be a non-sens to invert due to bad understanding of this parameter (see cahayadi 2016).
+        \unsure[inline]{maybe a bit strong, check if cahayadi is the best quote or the other article where he try to inverte the amplitude.}
 
              -> we focused to study the tune of some parameter parameters which one can vary ?
 
