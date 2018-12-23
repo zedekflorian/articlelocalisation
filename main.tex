@@ -61,7 +61,9 @@ LEs données 1S apportent quoi en plus ? (idee voir les pointés de temps arivé
 
 Subduction zones are at the origin of the largest earthquakes and instrumentted them remains difficult because most of them are located under the oceans. Thus, classical onland instrumentation (GPS, seismology, InSAR...) does not allow certain parameters to be well resolved, such as the spatial extent of the rupture or the size of the tsunami that generally follows. One solution could come from studying the disturbances generated in the surrounding ionosphere by the event, earthquake and/or tsunami. These ionospheric disturbances result from coupling between land envelopes and can be tracked even over the oceans using ground-based GPS stations. We studied the potential of these ionospheric signals to constrain vertical uplift zones at the source. We focused in particular on a recent and well-documented earthquake, known as the Pedernales earthquake (Mw 7.8, Ecuador) of April 16, 2016, and whose rupture is mostly undersea.
 
-enjeux imagzr source tsunamis
+enjeux imager source tsunamis
+
+
 \unsure[inline]{Based on a parametric study, we show that ionospheric disturbances are mainly sensitive to the maximum uplift zone. But, the parameters of the model to take into account for a fine reconstruction of the observation are, in addition to its location, its initiation time, its amplitude and also the duration of the acoustic pulse associated with the uplift. This sensitivity of ionospheric data suggests an innovative use, especially since the approach is based on an existing, widespread, inexpensive and rapidly expanding technology. }
 \todo[inline]{add the 30s part}
 \todo[inline]{Florian's drive \url{https://drive.google.com/drive/folders/1V_BZK6es4G_p5GqnUbO_sK62iUpSy0hi?usp=sharing}}
@@ -129,6 +131,7 @@ During the past two decades it became quite common to use Global Navigation Syst
 
 Shallow
 
+Astafyeva, et al 2018 "CID generation over the epicentral area is not yet quite sufficient."
 
 
 \begin{table}
@@ -209,7 +212,7 @@ Insert ~ geometry ~ free ~ equation
 \begin{center}
 \includegraphics[width=1\linewidth]{images/sound_wind_epiVS2deg.png}
 \end{center}
-\caption{ \textit{\emph{atmospheric parameter}. a) soud speed for 2 different locations, b) wind speed for two different location }} 
+\caption{ \textit{\emph{atmospheric parameter}. a) sound speed for 2 different locations, b) wind speed for two different location }} 
 
 %\end{center}
 \label{atmos_param}
@@ -220,13 +223,15 @@ Insert ~ geometry ~ free ~ equation
 % Methodology
 %--------------------------------
 \section{Modelisation} 
-        Idea is to reconstruct the signal assuming N-shape wave produce in 1source point compute the perturbation for multiple receptor and found the acoustic source localisation where the perturbation is  reconstruct the best
+        Idea is to reconstruct the signal assuming N-shape wave produce in 1source point compute the perturbation for multiple receptor and found the acoustic source localisation where the perturbation is reconstructed the best. Following the methods proposed in Rolland et al. (2011,2013) we create an acoustic plane-wave centered on 5 mHz which follows the observed CID see ??? (citation). This wave is an N-shapes waves genreated from a gaussien derivative : 
       The impulse is an acoustic wave of 5 mHz propagating at sound speed, taking account of the attenuation 
         (-> eq N shape)
         (-> eq vitesse déplacement onde)
-         The acoustic wave is propagated in the atmosphere with a ray tracing method (citation, J.X. Dessa ??) when the atmospheric background is derived from NTRL (citation) and the ionosphere background is derived from IRI (citation). 
-        we integer the perturbation along the LOS between the IPP at 180 ? and 500?? km of altitude . 
-        Then we reconstruct the TEC time series.
+        
+         This  acoustic wave is propagated in the atmosphere with a ray tracing method (citation, J.X. Dessa ?? + see details in quentin Brissaud thesis). Then the interaction between the waves and the atmospheric background is computed. The atmospherics parameters such as air density, temperature and sound speed are derived from NTRL (citation) and the ionosphere background such as electron density is derived from IRI (citation). After that  the perturbation is integrated along the LOS between the SIPP at 180 ? (to discuss : astafyeva 2018, see changes if taking into account a lower boundary) and 500?? km of altitude in order to reconstruct the STEC perturbation. 
+        As we plan to test the impact of the satellites position and especially its elevation on the data we kept the STEC instead of converting it to VTEC. 
+        
+        The main parameters we focused to tune in our work is the impact of the broadening factor in the N-Shape generated waves   
 
              -> we focused to study the tune of some parameter parameters which one can vary ?
 
