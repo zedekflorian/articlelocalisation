@@ -225,6 +225,9 @@ Insert ~ geometry ~ free ~ equation
 \section{Modelisation} 
         Idea is to reconstruct the signal assuming N-shape wave produce in 1source point compute the perturbation for multiple receptor and found the acoustic source localisation where the perturbation is reconstructed the best. Following the methods proposed in Rolland et al. (2011,2013) we create an acoustic plane-wave centered on 5 mHz which follows the observed CID see ??? (citation). This wave is an N-shapes waves genreated from a gaussien derivative : 
       The impulse is an acoustic wave of 5 mHz propagating at sound speed, taking account of the attenuation 
+      :\begin{equation}\label{fct_source}
+V_p(t) = \frac{A\sqrt{2}}{\sigma^{\frac{3}{2}}\pi^{\frac{1}{4}}} (t-t_0) \ e^{-\frac{(t-t_0)^{2}}{2(\sigma)^{2}}} 
+\end{equation}
         (-> eq N shape)
         (-> eq vitesse déplacement onde)
         
